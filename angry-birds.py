@@ -26,6 +26,7 @@ while True:
     maskClose = cv2.morphologyEx(maskOpen, cv2.MORPH_CLOSE, kernelClose)
 
     _, conts, h = cv2.findContours(maskClose.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE) #basa _ koymasam calismiyodu neden??!!
+    #Value Error veriyordu.
     cv2.drawContours(image, conts, -1, (0, 0, 225), 2) 
 
     cv2.imshow("close", maskClose)
